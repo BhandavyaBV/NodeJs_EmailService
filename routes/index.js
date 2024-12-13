@@ -14,13 +14,13 @@ router.post('/send-email', upload.single('file'), function(req, res, next) {
     service: 'gmail',
     auth: {
       user: 'bhandavyabv01@gmail.com',
-      pass: 'ucth vnjo cngx cxmw',
+      pass: '',//password go here
     },
   });
 
   const mailOptions = {
     from: 'bhandavyabv01@gmail.com', // Sender email
-    to: 'bhandavyabv@gmail.com',                    // Recipient email
+    to: 'mxu@centra.ca,VKhatri@centra.ca',                    // Recipient email
     subject: subject, // Email subject
     text: 'All fields from the form', // Email body text
     attachments: [
