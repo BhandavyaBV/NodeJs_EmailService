@@ -14,6 +14,10 @@ const transporter = nodemailer.createTransport({
 });
 
 /* GET home page. */
+router.get('/', function(req, res, next) {
+  res.send('IoT Edge Computing Backend API');
+});
+
 router.post('/send-attachment', upload.single('file'), function(req, res, next) {
   const pdfBuffer = req.file.buffer;
   const subject = req.body.subject
